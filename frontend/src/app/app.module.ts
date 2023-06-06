@@ -8,6 +8,10 @@ import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ViewDestinationComponent } from './view-destination/view-destination.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { RegisterComponent } from './register/register.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -15,10 +19,14 @@ import { ViewDestinationComponent } from './view-destination/view-destination.co
     AppComponent,
     LandingPageComponent,
     HomePageComponent,
-    ViewDestinationComponent
+    ViewDestinationComponent,
+    NavbarComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [],

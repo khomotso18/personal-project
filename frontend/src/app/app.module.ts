@@ -12,6 +12,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { RegisterComponent } from './register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { ViewDubaiComponent } from './view-dubai/view-dubai.component';
+import { ViewAustraliaComponent } from './view-australia/view-australia.component';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { LoginComponent } from './login/login.component';
     ViewDestinationComponent,
     NavbarComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    ViewDubaiComponent,
+    ViewAustraliaComponent
   ],
   imports: [
     BrowserModule,

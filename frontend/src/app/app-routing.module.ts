@@ -8,17 +8,22 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { ViewDubaiComponent } from './view-dubai/view-dubai.component';
 import { ViewAustraliaComponent } from './view-australia/view-australia.component';
+import { ViewSouthafricaComponent } from './view-southafrica/view-southafrica.component';
+import { ViewSwitzerlandComponent } from './view-switzerland/view-switzerland.component';
 
 
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
   { path:'register', component: RegisterComponent},
-  { path:'view-dubai', component: ViewDubaiComponent},
-  { path:'view-australia', component: ViewAustraliaComponent },
   { path: 'home', component: HomePageComponent },
   { path: 'login', component: LoginComponent },
   { path: 'view', component: ViewDestinationComponent },
+  { path:'view-dubai', component: ViewDubaiComponent},
+  { path:'view-australia', component: ViewAustraliaComponent },
+  { path:'view-switzerland', component: ViewSwitzerlandComponent },
+  { path:'view-southafrica', component: ViewSouthafricaComponent},
+ 
   
 ];
 

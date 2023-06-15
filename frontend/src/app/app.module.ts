@@ -14,6 +14,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { ViewDubaiComponent } from './view-dubai/view-dubai.component';
 import { ViewAustraliaComponent } from './view-australia/view-australia.component';
+import { ViewSouthafricaComponent } from './view-southafrica/view-southafrica.component';
+import { ViewSwitzerlandComponent } from './view-switzerland/view-switzerland.component';
+
 
 
 @NgModule({
@@ -26,7 +29,10 @@ import { ViewAustraliaComponent } from './view-australia/view-australia.componen
     RegisterComponent,
     LoginComponent,
     ViewDubaiComponent,
-    ViewAustraliaComponent
+    ViewAustraliaComponent,
+    ViewSouthafricaComponent,
+    ViewSwitzerlandComponent,
+   
   ],
   imports: [
     BrowserModule,

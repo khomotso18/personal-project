@@ -10,8 +10,16 @@ import { UserService  } from '../services/user.service'
 export class RegisterComponent implements OnInit {
 
   myForm: FormGroup;
+  form: any = {
 
-  constructor(private fb: FormBuilder, ) {}
+    email: null,
+    password: null
+  };
+  isSuccessful = false;
+  isSignUpFailed = false;
+  errorMessage = '';
+
+  constructor(private fb: FormBuilder, public userService:UserService) {}
 
   ngOnInit(): void {
     this.myForm = this.fb.group({
@@ -21,11 +29,25 @@ export class RegisterComponent implements OnInit {
     });
   }
 
-  onSubmit(form: FormGroup) {
-    console.log('Valid?', form.valid); // true or false
-    console.log('Name', form.value.name);
-    console.log('Email', form.value.email);
-    console.log('Message', form.value.password);
-  }
-
+  onSubmit(): void {
+    const {email, password } = this.form;
+    //This Method That Returns An Observable Object (authService.register())
+    this.userService.signup(email, password).subscribe({
+      next: (data) => {
+        console.log(data);
+        this.isSuccessful = true;
+        this.isSignUpFailed = false;
+        // this.reloadPage();
+        // this.toastr.success("Registration Was Successful")
+        //added auto login
+       
+        window.location.replace("/home")
+      },
+      error: (err) => {
+        this.errorMessage = err.error.message;
+        this.isSignUpFailed = true;
+        //this.toastr.error("Registration Failed, Try Again")
+      }
+    });
+}
 }
